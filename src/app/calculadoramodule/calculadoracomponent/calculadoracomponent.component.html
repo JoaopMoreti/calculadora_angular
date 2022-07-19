@@ -1,0 +1,52 @@
+<nav class="navbar navbar-default">
+  <div class="conteiner-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        Projeto Soma
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="col-md-6 col-md-offset-6">
+    <form>
+      <div class="form-group row">
+        <label for="numero1" class="col-sm-2 col-form-label">Número 1:</label>
+        <div class="col-sm-4">
+          <input id="numero1" class="form-control" placeholder="Número 1" #numero1 type="text">
+          <small class="form-text text-muted">Digite o 1ºnúmero da operação</small>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="numero2" class="col-sm-2 col-form-label">Número 2:</label>
+        <div class="col-sm-4">
+          <input id="numero2" class="form-control" placeholder="Número 2" #numero2 type="text">
+          <small class="form-text text-muted">Digite o 2ºnúmero da operação</small>
+        </div>
+      </div>
+        <div class="container-fluid col">
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-primary" (click)="somar(numero1.value, numero2.value)">Somar</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-primary" (click)="subtrair(numero1.value, numero2.value)">Subtrair</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-primary" (click)="multiplicar(numero1.value, numero2.value)">Multiplicar</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-primary" (click)="dividir(numero1.value, numero2.value)">Dividir</button>
+            </div>
+          </div>
+        </div>
+      <div class="form-group row">
+        <label for="resultado" class="col-sm-2 col-form-label">Resultado:</label>
+        <div class="col-sm-4">
+          <input id="resultado" class="form-control" type="text" [value]="resultado">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
